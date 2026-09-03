@@ -1,3 +1,5 @@
 *.png
-*html
+*.html
+*.xml
+.idea/
 RobotFramework_code_from_owner/
