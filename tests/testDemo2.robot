@@ -11,20 +11,24 @@ Resource       ../pageObjects/ChildPage.robot
 
 *** Test Cases ***
 Validate unsuccessful login
+    [Tags]    SMOKE
     LandingPage.fill the login form    ${user_name}      ${invalid_password}
     LandingPage.wait until it checks
     LandingPage.verify message is correct
 
 Validate cards display in the shopping page
+    [Tags]    SMOKE
     LandingPage.fill the login form    ${user_name}    ${valid_password}
     ShopPage.wait until it checks
     ShopPage.verify card titles in the shop page
     ShopPage.select the card        Blackberry
 
 Select the form and navigate to child window
+    [Tags]    SMOKE
     LandingPage.fill the login form and select the user option    ${user_name}    ${valid_password}
 
 Validate child window functionality
+    [Tags]    SMOKE
     LandingPage.select the link of child window
     ChildPage.switch to child window
     ChildPage.grab the email id in the child window
