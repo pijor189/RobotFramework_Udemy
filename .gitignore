@@ -3,3 +3,6 @@
 *.xml
 .idea/
 RobotFramework_code_from_owner/
+pabot_results/
+*.log
+.pabotsuitenames
